@@ -29,11 +29,12 @@ module LiquidMarkdown
     end
 
     class LIQMD
-     def self.call(template)
+     def self.call(template, source=nil)
+        source ||= template.source
         if template.formats.include?(:html)
-          "LiquidMarkdown::TemplateHandler.render(#{template.source.inspect}, self, :html)"
+          "LiquidMarkdown::TemplateHandler.render(#{source.inspect}, self, :html)"
         else
-          "LiquidMarkdown::TemplateHandler.render(#{template.source.inspect}, self, :text)"
+          "LiquidMarkdown::TemplateHandler.render(#{source.inspect}, self, :text)"
         end
       end
     end
