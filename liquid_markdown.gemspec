@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'kramdown', '~> 1.12', '>= 1.12.0'
-  spec.add_dependency 'liquid', '~> 4.0', '>= 4.0.0'
+  spec.add_dependency 'liquid', '~> 5.1', '>= 5.1.0'
   spec.add_dependency 'actionmailer', '>= 4.0'
   spec.add_dependency 'actionview', '>= 4.0'
   spec.add_dependency 'panoramic', '~> 0.0.6'
